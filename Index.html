@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Meu Jogo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="plmds.js"></script>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  <script>
+    const engine = new Engine();
+    engine.startGame({
+      canvas: document.getElementById("canvas"),
+      executable: "plmds",
+      mainPack: "plmds.pck",
+      args: [],
+    }).catch((err) => {
+      console.error("Erro ao iniciar o jogo:", err);
+    });
+  </script>
+</body>
+</html>
